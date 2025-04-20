@@ -1,4 +1,7 @@
+import logging
 from django.shortcuts import render
 
 def index(request):
-    return render(request, "blog/index.html")
+  logger = logging.getLogger(__name__)
+  logger.error("log request")
+  return render(request, "blog/index.html")
